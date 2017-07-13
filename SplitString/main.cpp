@@ -18,11 +18,7 @@ std::vector<std::string> flex_split(const std::string & stringToSplit,const std:
 {
     std::regex regexToSplitWith {regexString};
     //create a ForwardIterator of submatches for the regex regexToSplitWith
-
-
     std::sregex_token_iterator wordsIterator {stringToSplit.begin(),stringToSplit.end(),regexToSplitWith,-1};
-
-
     return {wordsIterator,std::sregex_token_iterator{}};
 }
 
